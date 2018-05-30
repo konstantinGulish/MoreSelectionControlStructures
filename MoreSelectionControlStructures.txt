@@ -1,0 +1,132 @@
+PROGRAM1 (Read and sort letters):
+
+ALGORITHM:
+Program receives three letters, sorts them in the assending order, and outputs the sorted letters to the screen
+INPUTS
+letterOne, letterTwo, letterThree
+PROCESSING STEPS
+receive letterOne, letterTwo, letterThree
+compare letter one to letter two and letter three
+compare letter two to letter one and letter three
+compare letter three to letter one and letter two
+OUTPUTS
+display the letters in ascending order to the screen
+_______________
+
+PSEUDOCODE:
+
+Prompt user for letterOne
+Get letterOne
+Prompt user for letterTwo
+Get letterTwo
+Prompt user for letterThree
+Get letterThree
+IF letterOne < letterTwo and letterOne < letterThree
+THEN
+Place letter one first
+ELSE IF letterTwo < letterOne and letterTwo < letterThree
+THEN
+Place letterTwo first
+ELSE
+Place letterThree first
+ENDIF
+IF letterOne > letterTwo and letterOne < letterThree
+THEN
+Place letterOne second
+ELSE IF letterTwo > letterOne and letterTwo < letterThree
+THEN
+Place letterTwo second
+ELSE
+Place letterThree second
+ENDIF
+IF letterOne > letterTwo and letterOne > letterThree
+THEN
+Place letterOne third
+ELSE IF letterTwo > letterOne and letterTwo > letterThree
+THEN
+Place letterTwo third
+ELSE
+Place letterThree third
+ENDIF
+Display the sorted letters to the screen
+
+PROGRAM2 (Process customer record):
+
+ALGORITHM:
+Program receives a customer's name, a purchase amount, and a tax code and then computes the sales tax and the total amount due,and print the customer’s name, purchase amount, sales tax and total amount due.
+INPUTS
+customerName, purchaseAmount, taxCode
+PROCESSING STEPS
+receive customerName, purchaseAmount, taxCode
+If taxCode is 0, assign salesTax to be 0
+If taxcode is 1, assign salesTax to be purchaseAmount times 0.03
+If taxcode is 2, assign salesTax to be purchaseAmount times 0.05
+If taxcode is 3, assign salesTax to be purchaseAmount times 0.07
+Calculate totalAmount = purchaseAmount plus salesTax
+
+OUTPUTS
+display customerName, purchaseAmount, salesTax, and totalAmount
+_______________
+
+PSEUDOCODE:
+
+Prompt user for customerName
+Get customerName
+Prompt user for purchaseAmount
+Get purchaseAmount
+Prompt user for taxCode
+Get taxCode
+IF taxCode = 0
+THEN
+salesTax = 0
+ELSE IF taxCode = 1
+THEN
+salesTax = purchaseAmount * 0.03
+ELSE IF taxCode = 2
+THEN
+salesTax = purchaseAmount * 0.05
+ELSE IF taxCode = 3
+THEN
+salesTax = purchaseAmount * 0.07
+ENDIF
+Calculate totalAmount = purchaseAmount + salesTax
+Displayisplay customerName, purchaseAmount, salesTax, and totalAmount
+
+PROGRAM3 (Calculate employee's pay):
+
+ALGORITHM:
+Program receives an nput data and error message in a week. It then validates the pay rate field and the hours worked field and, if valid, computes the employee’s weekly pay and then prints it and the input data to the screen.
+INPUTS
+employeeNumber, payRate, numberOfHours
+PROCESSING STEPS
+receive employeeNumber, payRate, numberOfHours
+If numberOfHours is greater then 60, display input data and error message
+If payRate is greater than 25, display nput data and error message
+Otherwise, if the numberOfHours is less than 35, calculate weeklyPay by multiplying hoursWorked by payRate
+Otherwise, calculate weeklyPay by multiplying 35 by payRate and adding remaining hours multiplied by payRate by 1.5
+OUTPUTS
+display input data and weeklyPay to the screen
+_______________
+
+PSEUDOCODE:
+
+Prompt user for employeeNumber
+Get employeeNumber
+Prompt user for payRate
+Get payRate
+Prompt user for numberOfHours
+Get numberOfHours
+IF numberOfHours > 60
+THEN
+Display employeeNumber, payRate, numberOfHours and error message
+ELSE IF payRate > 25
+THEN
+Display employeeNumber, payRate, numberOfHours and error message
+ELSE
+IF numberOfHours < 30
+THEN
+weeklyPay = payRate * numberOfHours
+ELSE
+weeklyPay = payRate * 35 + ((payRate * 1.5)* (numberOfHours-35))
+ENDIF
+Display employeeNumber, payRate, numberOfHours, and weeklyPay
